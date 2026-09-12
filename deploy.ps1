@@ -21,5 +21,5 @@ git commit -m "Deploy: $msg"
 git push origin gh-pages --force
 Pop-Location
 
-Write-Host "`n✅ Successfully deployed! Your site is live at:" -ForegroundColor Green
-Write-Host "👉 https://michaelemad02.github.io/michael_portfolio/`n" -ForegroundColor Yellow
+Write-Host "`nSuccessfully deployed! Your site is live at:" -ForegroundColor Green
+Write-Host "https://michaelemad02.github.io/michael_portfolio/`n" -ForegroundColor Yellow

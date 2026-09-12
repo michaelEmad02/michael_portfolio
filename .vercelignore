@@ -1,0 +1,13 @@
+.dart_tool
+.git
+android
+ios
+linux
+macos
+windows
+build/app
+build/windows
+build/linux
+build/macos
+stitch_michael_emad_portfolio
+test
