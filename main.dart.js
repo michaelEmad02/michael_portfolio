@@ -86297,7 +86297,7 @@ $0(){return this.a.d=!1},
 $S:0}
 A.t6.prototype={
 J(a){var s,r,q,p,o,n,m,l,k,j,i,h,g,f=this,e=null,d=A.a7(a).ax.a===B.M,c=A.bo(a,B.bs,t.l).w.a,b=f.f
-b=f.r?"\u0645\u0637\u0648\u0631 \u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0641\u0644\u0627\u062a\u0631 \u0648\u0623\u0646\u0638\u0645\u0629 \u0628\u0631\u0645\u062c\u064a\u0629 \u0645\u062a\u0643\u0627\u0645\u0644\u0629":"Flutter Developer & Software Engineer"
+b=f.r?"\u0645\u0637\u0648\u0631 \u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0641\u0644\u0627\u062a\u0631 \u0648\u0623\u0646\u0638\u0645\u0629 \u0628\u0631\u0645\u062c\u064a\u0629 \u0645\u062a\u0643\u0627\u0645\u0644\u0629":"Flutter Developer"
 s=$.ah().EY(8,8,B.bY)
 r=c.a
 r=r>900?700:r*0.92
