@@ -24,7 +24,8 @@ class ScrollReveal extends StatefulWidget {
   State<ScrollReveal> createState() => _ScrollRevealState();
 }
 
-class _ScrollRevealState extends State<ScrollReveal> with SingleTickerProviderStateMixin {
+class _ScrollRevealState extends State<ScrollReveal>
+    with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _opacity;
   late final Animation<Offset> _slide;
@@ -83,7 +84,8 @@ class _ScrollRevealState extends State<ScrollReveal> with SingleTickerProviderSt
       final screenHeight = MediaQuery.sizeOf(context).height;
 
       // Reveal generously when the element is within the viewport or just about to enter (50px before screen bottom)
-      if (position.dy <= screenHeight + 50 && position.dy + renderObject.size.height >= -50) {
+      if (position.dy <= screenHeight + 50 &&
+          position.dy + renderObject.size.height >= -50) {
         _triggerReveal();
       }
     } else {

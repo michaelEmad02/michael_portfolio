@@ -64,7 +64,8 @@ class _HeroSectionState extends State<HeroSection> {
                   children: [
                     Expanded(
                       flex: 6,
-                      child: _buildContent(context, isDark, isArabic, l10n, isStacked),
+                      child: _buildContent(
+                          context, isDark, isArabic, l10n, isStacked),
                     ),
                     const SizedBox(width: 48),
                     const Expanded(
@@ -92,7 +93,9 @@ class _HeroSectionState extends State<HeroSection> {
         Row(
           children: [
             Tooltip(
-              message: isArabic ? 'انقر لتكبير الصورة الشخصية' : 'Click to view profile photo',
+              message: isArabic
+                  ? 'انقر لتكبير الصورة الشخصية'
+                  : 'Click to view profile photo',
               child: MouseRegion(
                 cursor: SystemMouseCursors.click,
                 child: GestureDetector(
@@ -108,12 +111,16 @@ class _HeroSectionState extends State<HeroSection> {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: isDark ? AppColors.darkPrimary : AppColors.lightPrimary,
+                        color: isDark
+                            ? AppColors.darkPrimary
+                            : AppColors.lightPrimary,
                         width: 2,
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: (isDark ? AppColors.darkPrimary : AppColors.lightPrimary)
+                          color: (isDark
+                                  ? AppColors.darkPrimary
+                                  : AppColors.lightPrimary)
                               .withOpacity(0.3),
                           blurRadius: 10,
                         ),
@@ -142,7 +149,9 @@ class _HeroSectionState extends State<HeroSection> {
                     : AppColors.lightSurfaceContainerHigh,
                 borderRadius: BorderRadius.circular(AppRadius.full),
                 border: Border.all(
-                  color: isDark ? AppColors.darkOutlineVariant : AppColors.lightOutline,
+                  color: isDark
+                      ? AppColors.darkOutlineVariant
+                      : AppColors.lightOutline,
                 ),
               ),
               child: Row(
@@ -161,11 +170,15 @@ class _HeroSectionState extends State<HeroSection> {
                     l10n.heroAvailableForHire,
                     style: isArabic
                         ? AppTypography.bodyMedium(
-                            color: isDark ? AppColors.darkTextPrimary : AppColors.lightTextPrimary,
+                            color: isDark
+                                ? AppColors.darkTextPrimary
+                                : AppColors.lightTextPrimary,
                             isArabic: true,
                           ).copyWith(fontSize: 12, fontWeight: FontWeight.bold)
                         : AppTypography.code(
-                            color: isDark ? AppColors.darkTextPrimary : AppColors.lightTextPrimary,
+                            color: isDark
+                                ? AppColors.darkTextPrimary
+                                : AppColors.lightTextPrimary,
                             fontSize: 12,
                           ).copyWith(fontWeight: FontWeight.w600),
                   ),
@@ -182,11 +195,13 @@ class _HeroSectionState extends State<HeroSection> {
           l10n.heroGreeting,
           style: isArabic
               ? AppTypography.bodyLarge(
-                  color: isDark ? AppColors.darkPrimary : AppColors.lightPrimary,
+                  color:
+                      isDark ? AppColors.darkPrimary : AppColors.lightPrimary,
                   isArabic: true,
                 ).copyWith(fontWeight: FontWeight.bold)
               : AppTypography.code(
-                  color: isDark ? AppColors.darkPrimary : AppColors.lightPrimary,
+                  color:
+                      isDark ? AppColors.darkPrimary : AppColors.lightPrimary,
                   fontSize: 18,
                 ).copyWith(fontWeight: FontWeight.bold),
         ),
@@ -197,7 +212,8 @@ class _HeroSectionState extends State<HeroSection> {
         Text(
           l10n.heroName,
           style: AppTypography.headingLarge(
-            color: isDark ? AppColors.darkTextPrimary : AppColors.lightTextPrimary,
+            color:
+                isDark ? AppColors.darkTextPrimary : AppColors.lightTextPrimary,
             isArabic: isArabic,
           ),
         ),
@@ -209,11 +225,13 @@ class _HeroSectionState extends State<HeroSection> {
           AppConstants.developerRole,
           style: isArabic
               ? AppTypography.headingSmall(
-                  color: isDark ? const Color(0xFF7BD0FF) : AppColors.lightPrimary,
+                  color:
+                      isDark ? const Color(0xFF7BD0FF) : AppColors.lightPrimary,
                   isArabic: true,
                 ).copyWith(fontWeight: FontWeight.w700)
               : AppTypography.headingSmall(
-                  color: isDark ? const Color(0xFF7BD0FF) : AppColors.lightPrimary,
+                  color:
+                      isDark ? const Color(0xFF7BD0FF) : AppColors.lightPrimary,
                 ).copyWith(fontWeight: FontWeight.w700),
         ),
 
@@ -223,7 +241,9 @@ class _HeroSectionState extends State<HeroSection> {
         Text(
           l10n.heroDescription,
           style: AppTypography.bodyLarge(
-            color: isDark ? AppColors.darkTextSecondary : AppColors.lightTextSecondary,
+            color: isDark
+                ? AppColors.darkTextSecondary
+                : AppColors.lightTextSecondary,
             isArabic: isArabic,
           ),
         ),
@@ -312,13 +332,17 @@ class _HeroSectionState extends State<HeroSection> {
                   : AppColors.lightSurfaceContainerHigh,
               borderRadius: BorderRadius.circular(AppRadius.xs),
               border: Border.all(
-                color: isDark ? AppColors.darkOutlineVariant : AppColors.lightOutline,
+                color: isDark
+                    ? AppColors.darkOutlineVariant
+                    : AppColors.lightOutline,
               ),
             ),
             child: Icon(
               icon,
               size: 18,
-              color: isDark ? AppColors.darkTextPrimary : AppColors.lightTextPrimary,
+              color: isDark
+                  ? AppColors.darkTextPrimary
+                  : AppColors.lightTextPrimary,
             ),
           ),
         ),

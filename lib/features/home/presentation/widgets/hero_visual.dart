@@ -7,44 +7,8 @@ import '../../../../core/theme/app_radius.dart';
 import '../../../../shared/widgets/app_network_image.dart';
 import '../../../../shared/widgets/full_screen_image_viewer.dart';
 
-class HeroVisual extends StatefulWidget {
+class HeroVisual extends StatelessWidget {
   const HeroVisual({super.key});
-
-  @override
-  State<HeroVisual> createState() => _HeroVisualState();
-}
-
-class _HeroVisualState extends State<HeroVisual>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _controller;
-  late final Animation<double> _floatingAnimation;
-  late final Animation<double> _badgeFloat;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 4),
-    )..repeat(reverse: true);
-
-    _floatingAnimation = Tween<double>(begin: -6.0, end: 6.0).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
-    );
-
-    _badgeFloat = Tween<double>(begin: -4.0, end: 4.0).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: const Interval(0.1, 0.9, curve: Curves.easeInOut),
-      ),
-    );
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +25,7 @@ class _HeroVisualState extends State<HeroVisual>
   }
 
   // ==========================================
-  // MOBILE LAYOUT (Clean, No Overlapping)
+  // MOBILE LAYOUT (Clean, Static, No Overlapping)
   // ==========================================
   Widget _buildMobileLayout(
     BuildContext context,
@@ -75,29 +39,20 @@ class _HeroVisualState extends State<HeroVisual>
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        // 1. Portrait Card with Ambient Glow
-        AnimatedBuilder(
-          animation: _controller,
-          builder: (context, child) {
-            return Transform.translate(
-              offset: Offset(0, _floatingAnimation.value * 0.6),
-              child: child,
-            );
-          },
-          child: SizedBox(
-            width: cardWidth,
-            child: _buildPortraitCard(
-              context,
-              isDark: isDark,
-              isArabic: isArabic,
-              showBottomIdentity: true,
-            ),
+        // 1. Portrait Card
+        SizedBox(
+          width: cardWidth,
+          child: _buildPortraitCard(
+            context,
+            isDark: isDark,
+            isArabic: isArabic,
+            showBottomIdentity: true,
           ),
         ),
 
         const SizedBox(height: 18),
 
-        // 2. Badges neatly arranged in an adaptive wrap below the photo
+        // 2. Badges neatly arranged below the photo
         SizedBox(
           width: cardWidth + 20,
           child: Wrap(
@@ -140,108 +95,90 @@ class _HeroVisualState extends State<HeroVisual>
   }
 
   // ==========================================
-  // DESKTOP LAYOUT (Floating Cyber Aesthetic)
+  // DESKTOP LAYOUT (Clean Static Editorial Card)
   // ==========================================
   Widget _buildDesktopLayout(
     BuildContext context,
     bool isDark,
     bool isArabic,
   ) {
-    return AnimatedBuilder(
-      animation: _controller,
-      builder: (context, child) {
-        return Transform.translate(
-          offset: Offset(0, _floatingAnimation.value),
-          child: child,
-        );
-      },
-      child: Center(
-        child: SizedBox(
-          width: 400,
-          child: Stack(
-            clipBehavior: Clip.none,
-            alignment: Alignment.center,
-            children: [
-              // Ambient Glow Background
-              Positioned(
-                top: -24,
-                right: -24,
-                child: Container(
-                  width: 280,
-                  height: 280,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    gradient: RadialGradient(
-                      colors: [
-                        (isDark ? AppColors.darkPrimary : AppColors.lightPrimary)
-                            .withOpacity(0.22),
-                        Colors.transparent,
-                      ],
-                    ),
+    return Center(
+      child: SizedBox(
+        width: 400,
+        child: Stack(
+          clipBehavior: Clip.none,
+          alignment: Alignment.center,
+          children: [
+            // Ambient Glow Background
+            Positioned(
+              top: -24,
+              right: -24,
+              child: Container(
+                width: 280,
+                height: 280,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: RadialGradient(
+                    colors: [
+                      (isDark ? AppColors.darkPrimary : AppColors.lightPrimary)
+                          .withOpacity(0.18),
+                      Colors.transparent,
+                    ],
                   ),
                 ),
               ),
+            ),
 
-              // Main Portrait Card
-              _buildPortraitCard(
+            // Main Portrait Card
+            _buildPortraitCard(
+              context,
+              isDark: isDark,
+              isArabic: isArabic,
+              showBottomIdentity: true,
+            ),
+
+            // Badge 1: Flutter (Top-Left)
+            Positioned(
+              top: 24,
+              left: -36,
+              child: _buildBadge(
                 context,
+                icon: Icons.flutter_dash_rounded,
+                title: 'Flutter & Dart',
+                subtitle: isArabic ? 'تطبيقات عالية الأداء' : 'High Performance',
+                color: AppColors.darkPrimary,
                 isDark: isDark,
-                isArabic: isArabic,
-                showBottomIdentity: true,
               ),
+            ),
 
-              // Floating Badge 1: Flutter (Top-Left, Outside)
-              Positioned(
-                top: 24,
-                left: -44,
-                child: Transform.translate(
-                  offset: Offset(0, _badgeFloat.value),
-                  child: _buildBadge(
-                    context,
-                    icon: Icons.flutter_dash_rounded,
-                    title: 'Flutter & Dart',
-                    subtitle: isArabic ? 'تطبيقات عالية الأداء' : 'High Performance',
-                    color: AppColors.darkPrimary,
-                    isDark: isDark,
-                  ),
-                ),
+            // Badge 2: Clean Architecture (Bottom-Right)
+            Positioned(
+              bottom: 48,
+              right: -36,
+              child: _buildBadge(
+                context,
+                icon: Icons.architecture_rounded,
+                title: 'Clean Architecture',
+                subtitle: isArabic ? 'هندسة برمجيات متقدمة' : 'SOLID & Scalable',
+                color: AppColors.accentGreen,
+                isDark: isDark,
               ),
+            ),
 
-              // Floating Badge 2: Clean Architecture (Bottom-Right, Outside)
-              Positioned(
-                bottom: 48,
-                right: -44,
-                child: Transform.translate(
-                  offset: Offset(0, -_badgeFloat.value),
-                  child: _buildBadge(
-                    context,
-                    icon: Icons.architecture_rounded,
-                    title: 'Clean Architecture',
-                    subtitle: isArabic ? 'هندسة برمجيات متقدمة' : 'SOLID & Scalable',
-                    color: AppColors.accentGreen,
-                    isDark: isDark,
-                  ),
-                ),
+            // Badge 3: C# • SQL • ERP (Bottom-Left)
+            Positioned(
+              bottom: -20,
+              left: -12,
+              child: _buildBadge(
+                context,
+                icon: Icons.business_center_rounded,
+                title: 'C# • SQL • ERP',
+                subtitle: isArabic ? 'أنظمة مؤسسية متكاملة' : 'Enterprise Systems',
+                color: AppColors.accentAmber,
+                isDark: isDark,
               ),
-
-              // Floating Badge 3: C# • SQL • ERP (Bottom-Left)
-              Positioned(
-                bottom: -20,
-                left: -16,
-                child: Transform.translate(
-                  offset: Offset(0, _badgeFloat.value * 0.7),
-                  child: _buildBadge(
-                    context,
-                    icon: Icons.business_center_rounded,
-                    title: 'C# • SQL • ERP',
-                    subtitle: isArabic ? 'أنظمة مؤسسية متكاملة' : 'Enterprise Systems',
-                    color: AppColors.accentAmber,
-                    isDark: isDark,
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -10,7 +10,8 @@ class AppConstants {
   static const String location = 'Egypt';
 
   // Profile Image URL (loaded from internet with local asset fallback)
-  static const String profileImageUrl = 'https://res.cloudinary.com/v3hxdb7o/image/upload/v1789214648/me.webp';
+  static const String profileImageUrl =
+      'https://res.cloudinary.com/v3hxdb7o/image/upload/v1789214648/me.webp';
   static const String profileAssetPath = 'assets/images/michael_emad.jpg';
 
   // Storage Keys

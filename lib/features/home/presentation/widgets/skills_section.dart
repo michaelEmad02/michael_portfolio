@@ -127,9 +127,8 @@ class SkillsSection extends StatelessWidget {
               LayoutBuilder(
                 builder: (context, constraints) {
                   final isSmall = constraints.maxWidth < 640;
-                  final crossAxisCount = isSmall
-                      ? 1
-                      : (constraints.maxWidth < 1000 ? 2 : 3);
+                  final crossAxisCount =
+                      isSmall ? 1 : (constraints.maxWidth < 1000 ? 2 : 3);
                   final extent = isSmall ? 250.0 : 230.0;
 
                   return GridView.builder(
@@ -172,13 +171,19 @@ class SkillsSection extends StatelessWidget {
                                     overflow: TextOverflow.ellipsis,
                                     style: isArabic
                                         ? AppTypography.bodyMedium(
-                                            color: isDark ? AppColors.darkTextPrimary : AppColors.lightTextPrimary,
+                                            color: isDark
+                                                ? AppColors.darkTextPrimary
+                                                : AppColors.lightTextPrimary,
                                             isArabic: true,
-                                          ).copyWith(fontWeight: FontWeight.bold)
+                                          ).copyWith(
+                                            fontWeight: FontWeight.bold)
                                         : AppTypography.code(
-                                            color: isDark ? AppColors.darkTextPrimary : AppColors.lightTextPrimary,
+                                            color: isDark
+                                                ? AppColors.darkTextPrimary
+                                                : AppColors.lightTextPrimary,
                                             fontSize: 14,
-                                          ).copyWith(fontWeight: FontWeight.bold),
+                                          ).copyWith(
+                                            fontWeight: FontWeight.bold),
                                   ),
                                 ),
                               ],
@@ -228,7 +233,8 @@ class _SlideInChip extends StatefulWidget {
   State<_SlideInChip> createState() => _SlideInChipState();
 }
 
-class _SlideInChipState extends State<_SlideInChip> with SingleTickerProviderStateMixin {
+class _SlideInChipState extends State<_SlideInChip>
+    with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _opacity;
   late final Animation<Offset> _slide;
@@ -241,7 +247,8 @@ class _SlideInChipState extends State<_SlideInChip> with SingleTickerProviderSta
       duration: const Duration(milliseconds: 400),
     );
 
-    final curved = CurvedAnimation(parent: _controller, curve: Curves.easeOutCubic);
+    final curved =
+        CurvedAnimation(parent: _controller, curve: Curves.easeOutCubic);
     _opacity = Tween<double>(begin: 0.0, end: 1.0).animate(curved);
     // Slide in from side: if Arabic (RTL) slide from right (+24), if English (LTR) slide from left (-24)
     final startX = widget.isArabic ? 24.0 : -24.0;
