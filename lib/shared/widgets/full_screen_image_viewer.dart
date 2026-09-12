@@ -52,7 +52,7 @@ class FullScreenImageViewer extends StatelessWidget {
     final displaySubtitle = subtitle ??
         (isArabic
             ? 'مطور تطبيقات فلاتر وأنظمة برمجية متكاملة'
-            : 'Flutter Developer & Software Engineer');
+            : 'Flutter Developer');
 
     return BackdropFilter(
       filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
