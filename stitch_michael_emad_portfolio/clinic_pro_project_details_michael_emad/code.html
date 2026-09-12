@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"secondary-fixed-dim": "#c0c1ff", "on-surface": "#dee3e8", "on-primary": "#00354a", "primary-container": "#38bdf8", "on-tertiary": "#131e8c", "primary-fixed": "#c4e7ff", "on-tertiary-fixed": "#000767", "on-error": "#690005", "tertiary-fixed-dim": "#bdc2ff", "surface-container-high": "#252b2e", "error": "#ffb4ab", "surface-dim": "#0f1418", "surface-container-lowest": "#0a0f12", "surface-variant": "#303539", "surface-tint": "#7bd0ff", "primary": "#8ed5ff", "on-primary-container": "#004965", "surface-container-low": "#171c20", "on-secondary-fixed-variant": "#2f2ebe", "on-background": "#dee3e8", "secondary-fixed": "#e1e0ff", "on-primary-fixed": "#001e2c", "on-primary-fixed-variant": "#004c69", "tertiary-fixed": "#e0e0ff", "inverse-primary": "#00668a", "secondary-container": "#3131c0", "on-secondary-container": "#b0b2ff", "secondary": "#c0c1ff", "inverse-on-surface": "#2c3135", "on-secondary-fixed": "#07006c", "outline-variant": "#3e484f", "on-error-container": "#ffdad6", "on-tertiary-container": "#2c37a0", "inverse-surface": "#dee3e8", "surface-container": "#1b2024", "surface-container-highest": "#303539", "on-surface-variant": "#bdc8d1", "background": "#0f1418", "primary-fixed-dim": "#7bd0ff", "error-container": "#93000a", "on-secondary": "#1000a9", "on-tertiary-fixed-variant": "#2f3aa3", "outline": "#87929a", "tertiary": "#c5c9ff", "surface": "#0f1418", "surface-bright": "#343a3e", "tertiary-container": "#a3abff"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"margin": "2rem", "gutter": "1.5rem", "space-8": "2rem", "space-16": "4rem", "space-6": "1.5rem", "space-4": "1rem", "space-2": "0.5rem", "space-12": "3rem"}, "fontFamily": {"headline-lg": ["Space Grotesk"], "body-md": ["JetBrains Mono"], "code-sm": ["JetBrains Mono"], "body-lg": ["JetBrains Mono"], "headline-xl": ["Space Grotesk"], "headline-md": ["Space Grotesk"]}, "fontSize": {"headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}], "code-sm": ["12px", {"lineHeight": "1.5", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}], "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><a class="text-headline-md font-headline-md text-primary tracking-tight" data-path="home" href="#">Michael Emad</a><nav class="hidden lg:flex items-center gap-space-6" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg px-3 py-1.5"><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-bold rounded-lg px-3 py-1.5" data-path="home" href="#">Home</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="skills" href="#">Skills</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#">Projects</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="experience" href="#">Experience</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-4"><button aria-label="Toggle Language" class="p-space-2 rounded-lg bg-surface-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-all flex items-center gap-1 text-code-sm"><span class="material-symbols-outlined text-[18px]">language</span><span>EN/AR</span></button><button aria-label="Toggle Theme" class="p-space-2 rounded-lg bg-surface-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-all"><span class="material-symbols-outlined text-[18px]">dark_mode</span></button><a class="hidden sm:inline-flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-xl font-bold hover:bg-primary-container transition-all text-body-md" data-path="contact" href="#"><span class="material-symbols-outlined text-[18px]">download</span>CV</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full text-on-surface bg-surface font-body-md selection:bg-primary-container selection:on-primary-container">
+<!-- Breadcrumbs & Sub-nav Bar -->
+<div class="w-full bg-surface-container-low border-b border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-14 flex items-center justify-between text-code-sm">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="projects" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Projects</span>
+</a>
+<span>/</span>
+<span class="text-on-surface font-bold">Clinic Pro</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="hidden sm:inline-block px-2 py-0.5 rounded bg-primary-container/10 text-primary-container font-bold">SaaS Platform</span>
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span>Production Ready</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Hero / Project Header -->
+<section class="relative pt-12 pb-20 px-6 lg:px-12 max-w-7xl mx-auto w-full overflow-hidden">
+<!-- Decorative background glow -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary-container/5 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col items-start gap-space-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest text-primary-container text-code-sm font-bold border border-primary-container/20">
+<span class="material-symbols-outlined text-[16px]">medical_services</span>
+          Medical Clinic Management SaaS
+        </div>
+<h1 class="text-headline-xl font-headline-xl text-on-surface tracking-tight">
+          Clinic Pro
+        </h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl">
+          A multi-tenant clinic management platform engineered for modern healthcare providers. Features role-based authentication, smart real-time queue management, subscription billing, deep reporting, and secure payment integrations.
+        </p>
+<!-- Tech Stack Chips -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 rounded-lg bg-surface-container text-primary-container text-code-sm border border-outline-variant/30">Flutter</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container text-primary-container text-code-sm border border-outline-variant/30">Supabase</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container text-primary-container text-code-sm border border-outline-variant/30">PostgreSQL</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container text-primary-container text-code-sm border border-outline-variant/30">BLoC / Cubit</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container text-primary-container text-code-sm border border-outline-variant/30">Clean Architecture</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container text-primary-container text-code-sm border border-outline-variant/30">Paymob API</span>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-xl font-bold hover:bg-primary-container transition-all text-body-md shadow-lg shadow-primary/10" href="#screenshots">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+            Live Preview Gallery
+          </a>
+<a class="inline-flex items-center gap-2 bg-surface-container-high text-on-surface px-6 py-3 rounded-xl font-bold hover:bg-surface-bright transition-all text-body-md border border-outline-variant/20" href="https://github.com" target="_blank">
+<span class="material-symbols-outlined text-[18px]">code</span>
+            Repository
+          </a>
+</div>
+</div>
+<!-- Hero Visual / Mockup -->
+<div class="lg:col-span-5">
+<div class="relative rounded-2xl bg-surface-container-low p-2 shadow-2xl border border-primary-container/20 group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/10 to-transparent rounded-2xl pointer-events-none"></div>
+<div class="rounded-xl overflow-hidden aspect-[4/3] relative bg-surface-container">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="High-tech medical SaaS dashboard interface rendered in dark mode with deep slate background, cyan accent highlights, patient queue analytics, revenue charts, and real-time appointment tokens." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDE-7KkKDvLgyjbsTafrd4o98WPUkIXu9TQp8q-Bl0bwRwJqZGqJxEzr_GB7_0rgLL98fiqUIMTXIzTGt5g-YnK940dvN-Jx-ywWtaY3-XeYk7CFgfQDXoWsv02TObqeQzwetQ3xYrMSOgcpw5igJosGJVQdyhAU_bJduIG5Tt3C7z4G1dwm_KFOOoFaGf45nkWjFD4ZdR7zBk_B46I0f30yZyehXaTvR9VlQlkjtB1X1QGYVi760_J2A')"></div>
+<!-- Floating badge overlay -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-md p-3 rounded-xl border border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">monitoring</span>
+</div>
+<div>
+<div class="text-code-sm font-bold text-on-surface">Queue Efficiency</div>
+<div class="text-[11px] text-on-surface-variant">Real-time sync active (99.8%)</div>
+</div>
+</div>
+<span class="text-emerald-400 font-bold text-code-sm">+24% vs avg</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Overview Section -->
+<section class="py-16 bg-surface-container-low/50 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div>
+<span class="text-code-sm text-primary font-bold uppercase tracking-widest">System Overview</span>
+<h2 class="text-headline-md font-headline-md text-on-surface mt-2">Engineered for Scalable Practice Management</h2>
+</div>
+<div class="lg:col-span-2 flex flex-col gap-4 text-on-surface-variant">
+<p class="text-body-lg">
+          Modern medical facilities require lightning-fast performance, rock-solid reliability, and zero data leakage across multi-tenant boundaries. Clinic Pro was built from the ground up to solve these exact friction points for clinics ranging from single-practitioner offices to large multi-specialty hospitals.
+        </p>
+<p class="text-body-md">
+          By combining Flutter's cross-platform rendering power with Supabase's real-time PostgreSQL database infrastructure, Clinic Pro ensures instant synchronization of appointment tokens, billing records, and electronic health records across desktop reception desks and mobile doctor tablets.
+        </p>
+</div>
+</div>
+</section>
+<!-- Key Features Bento Grid -->
+<section class="py-20 px-6 lg:px-12 max-w-7xl mx-auto w-full">
+<div class="flex flex-col items-center text-center mb-16">
+<span class="text-code-sm text-primary font-bold uppercase tracking-widest">Capabilities</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-2">Core Feature Architecture</h2>
+<p class="text-body-lg text-on-surface-variant mt-2 max-w-xl">Robust modules designed specifically for clinical workflows and administrative efficiency.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/10 flex flex-col justify-between hover:border-primary-container/30 transition-all group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary-container mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<h3 class="text-headline-md text-on-surface text-lg font-bold mb-2">Role-Based Access</h3>
+<p class="text-body-md text-on-surface-variant">Granular permissions configured dynamically for Admins, Doctors, Receptionists, and Patients with encrypted session tokens.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/10 flex items-center justify-between text-code-sm text-primary">
+<span>Security Layer</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/10 flex flex-col justify-between hover:border-primary-container/30 transition-all group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary-container mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">queue</span>
+</div>
+<h3 class="text-headline-md text-on-surface text-lg font-bold mb-2">Smart Queue Management</h3>
+<p class="text-body-md text-on-surface-variant">Live token status board with real-time websocket updates, average wait-time calculations, and patient push notifications.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/10 flex items-center justify-between text-code-sm text-primary">
+<span>Realtime Websockets</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/10 flex flex-col justify-between hover:border-primary-container/30 transition-all group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary-container mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<h3 class="text-headline-md text-on-surface text-lg font-bold mb-2">Payments &amp; Subscriptions</h3>
+<p class="text-body-md text-on-surface-variant">Integrated Paymob payment gateway supporting automated monthly SaaS renewals, invoice generation, and receipt printing.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/10 flex items-center justify-between text-code-sm text-primary">
+<span>Paymob SDK</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/10 flex flex-col justify-between hover:border-primary-container/30 transition-all group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary-container mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">analytics</span>
+</div>
+<h3 class="text-headline-md text-on-surface text-lg font-bold mb-2">Advanced Reporting</h3>
+<p class="text-body-md text-on-surface-variant">Comprehensive clinic analytics tracking daily patient volume, doctor utilization ratios, revenue streams, and medical inventory.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/10 flex items-center justify-between text-code-sm text-primary">
+<span>Data Visualizer</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Architecture Section -->
+<section class="py-20 bg-surface-container-low border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-code-sm text-primary font-bold uppercase tracking-widest">Architecture</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-2">Clean Architecture &amp; State Flow</h2>
+</div>
+<p class="text-body-md text-on-surface-variant max-w-md">Strict adherence to separation of concerns ensures testability, modularity, and rapid feature expansion.</p>
+</div>
+<!-- Architecture Flow Diagram Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant/10 flex flex-col gap-4 relative">
+<div class="text-code-sm text-primary-container font-bold">01 / PRESENTATION</div>
+<h3 class="text-headline-md text-on-surface text-xl">UI &amp; BLoC / Cubit</h3>
+<p class="text-body-md text-on-surface-variant">Widgets consume immutable state streams emitted by Cubits. UI logic is entirely decoupled from business rules and database drivers.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/10 flex items-center gap-2 text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+<span>Reactive State Management</span>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant/10 flex flex-col gap-4 relative">
+<div class="text-code-sm text-primary-container font-bold">02 / DOMAIN</div>
+<h3 class="text-headline-md text-on-surface text-xl">Use Cases &amp; Entities</h3>
+<p class="text-body-md text-on-surface-variant">Core business logic encapsulated in pure Dart use-cases. Repositories defined as abstract interfaces ensuring platform independence.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/10 flex items-center gap-2 text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">rule</span>
+<span>Pure Business Logic</span>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant/10 flex flex-col gap-4 relative">
+<div class="text-code-sm text-primary-container font-bold">03 / DATA</div>
+<h3 class="text-headline-md text-on-surface text-xl">Supabase &amp; Models</h3>
+<p class="text-body-md text-on-surface-variant">Data sources handle Supabase REST queries and Realtime channels. Models map JSON payloads to domain entities safely.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/10 flex items-center gap-2 text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">database</span>
+<span>PostgreSQL Backend</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Screenshots Gallery -->
+<section class="py-20 px-6 lg:px-12 max-w-7xl mx-auto w-full" id="screenshots">
+<div class="flex flex-col items-center text-center mb-16">
+<span class="text-code-sm text-primary font-bold uppercase tracking-widest">Interface Preview</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-2">Clinic Pro Visual Suite</h2>
+<p class="text-body-lg text-on-surface-variant mt-2 max-w-xl">Explore key screens built with pixel-perfect Flutter UI design.</p>
+</div>
+<!-- Main Screenshot Display -->
+<div class="bg-surface-container rounded-2xl p-3 border border-outline-variant/20 shadow-2xl mb-6">
+<div class="aspect-[16/9] w-full rounded-xl overflow-hidden relative bg-surface-container-low">
+<div class="bg-cover bg-center w-full h-full" data-alt="Primary clinic dashboard screen in dark mode showing appointment scheduler, queue status cards, daily financial metrics, and doctor availability toggles." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVIVWyMNy9fp4GtzkWzYBkQ0SrU8uQuN0O9FGf0vTBo07pIjlh3DpBHik6goTZz4L2j3-yJSpSXkGEwBXBEmDQ-h_BFOMmsJ--mggXRWJZkvmd5aydegSA9ILV8m6-IPjSXqC-NiD9oxYN4kVQK624yFE-rZtElpewrchXj1dd4jsPSIJZro0iftSHPcFYApiqidwcr5ZhRUb15kp3sXGXlS3Z0_K7jLg4rAq9vwy9fd3xDf7Rw7rzsA')"></div>
+</div>
+</div>
+<!-- Thumbnail Selector Previews -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="rounded-xl overflow-hidden border-2 border-primary cursor-pointer aspect-video relative bg-surface-container">
+<div class="bg-cover bg-center w-full h-full" data-alt="Thumbnail preview of clinic dashboard overview." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCt8X0Ae3CyFNRkxSagRR50gf8wMh72OnM43TDcMCjZesaD1R4CpE2pPuSUHpRRI2RAxbNQDn0GzEN2fkvULL1NeWDEMdXb9MsdZpVcDi-QViLqnAl16gn2jyI0pYw5Hi75HZiBZcY3g0a6CoOxziq_inETdF3oG6JqR7MVw6tX7wJJiG2KFpm5u7E6_OWe68Hyy-RoDxDeJZApO_2-9tEsKdP4gnqDD3so2f6wAfJbERLy0ph4xzF-DA')"></div>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+<div class="rounded-xl overflow-hidden border-2 border-transparent hover:border-outline cursor-pointer aspect-video relative bg-surface-container opacity-75 hover:opacity-100 transition-all">
+<div class="bg-cover bg-center w-full h-full" data-alt="Thumbnail preview of live queue token management screen." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAjrkIvT_QP7neVA38-xvt2f87Fe0XUEFoz62W1dlCIF_2XJrQ9CFDMTiSZ5uAH2nt5_ZPdTE2dfrTBAi8HRUnBa-JAU8V2yfHBBNoX2X-Xwi5HL0Wtb-pP2_pmU2N9Uj5QgeS7D6WFsKO95UHXMktSj17oDaAHaI1gWwLROCmNenAaIlqt7EniCS-qMtdo3SZ6qLqjKwNJ1XpoPtQKOzQD0tvhVeW4SxvBhSnDbMxKCSLoV-tQcGBp2w')"></div>
+</div>
+<div class="rounded-xl overflow-hidden border-2 border-transparent hover:border-outline cursor-pointer aspect-video relative bg-surface-container opacity-75 hover:opacity-100 transition-all">
+<div class="bg-cover bg-center w-full h-full" data-alt="Thumbnail preview of patient electronic medical record (EMR) view." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWt6LX1mupBUxyYJAKo3EyfvdgCvDV3q9dlQkO1qKf3-0Hcwkz3bPnOK3JDv03ljfvsAcTNAbrT6ibkUA4Pbe7VbQKbA8IR-eyqXl6nadnab_2G1pglGfZaF0Mc4TXqt4VxNi-RD4OQkYZ5IMADKgtJschdLD_JoaX64rP_AqZr9NDdr3p0-Kl5T5B2OAfcEpKQq-ByRMu51TAo20nrXvTeHm2ZyM0My1t3sh-CEby6yrA4Re4FdUOTw')"></div>
+</div>
+<div class="rounded-xl overflow-hidden border-2 border-transparent hover:border-outline cursor-pointer aspect-video relative bg-surface-container opacity-75 hover:opacity-100 transition-all">
+<div class="bg-cover bg-center w-full h-full" data-alt="Thumbnail preview of subscription billing and Paymob payment integration screen." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwN6zECyK-HHzgwc4jLGIZTVa8FWYPsKyPhLIwYZ1d9rf7FOkL1EjX13KS3luGdC_SOdDDN3WpZtEWp7nK7zjI8s_0O-YJ1W3ZalF8IrIdTSwD1HsGFmP_n1-vo3r_Q8fRT254jt_OiP7NL0IvtUPoD9F66xOHdZhA5GWcv855NfuGIkvmYujd6l4p3ESkabpgi6bgIt5tYAkEqiPYa4Uqxf32axk1UywxJ7X-UPaYFu1IdL8R-oulLg')"></div>
+</div>
+</div>
+</section>
+<!-- Challenges & Solutions -->
+<section class="py-20 bg-surface-container-low border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div>
+<span class="text-code-sm text-primary font-bold uppercase tracking-widest">Engineering Hurdles</span>
+<h2 class="text-headline-md font-headline-md text-on-surface mt-2 mb-6">Challenges &amp; Architectural Solutions</h2>
+<p class="text-body-md text-on-surface-variant mb-6">
+          Building a real-time multi-tenant SaaS application in Flutter presented unique state synchronization and database routing hurdles that required custom architectural patterns to conquer.
+        </p>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-[32px]">psychology</span>
+<div>
+<div class="text-code-sm font-bold text-on-surface">Zero Data Leakage Guarantee</div>
+<div class="text-body-md text-on-surface-variant text-[13px]">Strict Row Level Security (RLS) policies implemented in PostgreSQL.</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="bg-surface p-6 rounded-2xl border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-3">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<h3 class="text-headline-md text-on-surface text-base">Real-Time Queue Token Synchronization</h3>
+</div>
+<p class="text-body-md text-on-surface-variant">
+<strong class="text-on-surface">Challenge:</strong> Multiple reception desks and doctor tablets updating the queue simultaneously caused race conditions.<br/>
+<strong class="text-on-surface text-primary">Solution:</strong> Leveraged Supabase Realtime Channels coupled with optimistic UI updates inside BLoC to instantly reflect queue state while queue transactions settled asynchronously.
+          </p>
+</div>
+<div class="bg-surface p-6 rounded-2xl border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-3">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<h3 class="text-headline-md text-on-surface text-base">Multi-Tenant Database Routing</h3>
+</div>
+<p class="text-body-md text-on-surface-variant">
+<strong class="text-on-surface">Challenge:</strong> Isolating clinic records securely without provisioning separate database instances per tenant.<br/>
+<strong class="text-on-surface text-primary">Solution:</strong> Implemented dynamic tenant ID header injection in repository interceptors mapped directly to Supabase RLS schema contexts.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- My Contribution Section -->
+<section class="py-20 px-6 lg:px-12 max-w-7xl mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5">
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant/20 relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary-container/10 rounded-full blur-2xl"></div>
+<span class="text-code-sm text-primary font-bold uppercase tracking-widest">Developer Ownership</span>
+<h3 class="text-headline-md text-on-surface mt-2 mb-4">Michael Emad's Contribution</h3>
+<p class="text-body-md text-on-surface-variant">
+            As lead Flutter architect on Clinic Pro, I owned the entire state management architecture, repository pattern implementation, and Supabase real-time integration pipeline.
+          </p>
+<div class="mt-6 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span>Designed core BLoC / Cubit state flows</span>
+</div>
+<div class="flex items-center gap-2 text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span>Integrated GetIt dependency injection container</span>
+</div>
+<div class="flex items-center gap-2 text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span>Implemented Paymob subscription gateway SDK</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/10">
+<div class="flex items-center justify-between mb-4">
+<span class="text-code-sm text-primary-container font-bold">Code Architecture Sample</span>
+<span class="text-code-sm text-on-surface-variant">cubit/queue_cubit.dart</span>
+</div>
+<pre class="bg-surface p-4 rounded-xl text-code-sm text-on-surface-variant overflow-x-auto border border-outline-variant/10"><code>class QueueCubit extends Cubit&lt;QueueState&gt; {
+  final QueueRepository _repository;
+
+  QueueCubit(this._repository) : super(QueueInitial()) {
+    _repository.watchQueueStream().listen((tokens) {
+      emit(QueueLoaded(tokens));
+    });
+  }
+
+  Future&lt;void&gt; advanceToken(String tokenId) async {
+    try {
+      await _repository.updateTokenStatus(tokenId, 'completed');
+    } catch (e) {
+      emit(QueueError(e.toString()));
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer / Bottom Action Bar -->
+<section class="py-16 bg-surface-container-low border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col items-start gap-1">
+<span class="text-headline-md text-on-surface font-headline-md">Ready to explore more?</span>
+<span class="text-body-md text-on-surface-variant">Check out the complete source code or return to the portfolio overview.</span>
+</div>
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center gap-2 bg-surface-container-high text-on-surface px-6 py-3 rounded-xl font-bold hover:bg-surface-bright transition-all text-body-md border border-outline-variant/20" href="https://github.com" target="_blank">
+<span class="material-symbols-outlined text-[18px]">code</span>
+          GitHub Repository
+        </a>
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-xl font-bold hover:bg-primary-container transition-all text-body-md" data-path="projects" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+          Back to Portfolio
+        </a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-space-4 text-on-surface-variant text-body-md"><div>© 2024 Michael Emad. Built with Flutter &amp; Tailwind CSS.</div><div class="flex items-center gap-space-6"><a class="hover:text-on-surface transition-colors" href="#">GitHub</a><a class="hover:text-on-surface transition-colors" href="#">LinkedIn</a><a class="hover:text-on-surface transition-colors" href="#">Twitter</a></div></div></footer></body></html>

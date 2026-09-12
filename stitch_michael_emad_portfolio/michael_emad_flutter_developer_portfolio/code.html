@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"secondary-fixed-dim": "#c0c1ff", "on-surface": "#dee3e8", "on-primary": "#00354a", "primary-container": "#38bdf8", "on-tertiary": "#131e8c", "primary-fixed": "#c4e7ff", "on-tertiary-fixed": "#000767", "on-error": "#690005", "tertiary-fixed-dim": "#bdc2ff", "surface-container-high": "#252b2e", "error": "#ffb4ab", "surface-dim": "#0f1418", "surface-container-lowest": "#0a0f12", "surface-variant": "#303539", "surface-tint": "#7bd0ff", "primary": "#8ed5ff", "on-primary-container": "#004965", "surface-container-low": "#171c20", "on-secondary-fixed-variant": "#2f2ebe", "on-background": "#dee3e8", "secondary-fixed": "#e1e0ff", "on-primary-fixed": "#001e2c", "on-primary-fixed-variant": "#004c69", "tertiary-fixed": "#e0e0ff", "inverse-primary": "#00668a", "secondary-container": "#3131c0", "on-secondary-container": "#b0b2ff", "secondary": "#c0c1ff", "inverse-on-surface": "#2c3135", "on-secondary-fixed": "#07006c", "outline-variant": "#3e484f", "on-error-container": "#ffdad6", "on-tertiary-container": "#2c37a0", "inverse-surface": "#dee3e8", "surface-container": "#1b2024", "surface-container-highest": "#303539", "on-surface-variant": "#bdc8d1", "background": "#0f1418", "primary-fixed-dim": "#7bd0ff", "error-container": "#93000a", "on-secondary": "#1000a9", "on-tertiary-fixed-variant": "#2f3aa3", "outline": "#87929a", "tertiary": "#c5c9ff", "surface": "#0f1418", "surface-bright": "#343a3e", "tertiary-container": "#a3abff"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"margin": "2rem", "gutter": "1.5rem", "space-8": "2rem", "space-16": "4rem", "space-6": "1.5rem", "space-4": "1rem", "space-2": "0.5rem", "space-12": "3rem"}, "fontFamily": {"headline-lg": ["Space Grotesk"], "body-md": ["JetBrains Mono"], "code-sm": ["JetBrains Mono"], "body-lg": ["JetBrains Mono"], "headline-xl": ["Space Grotesk"], "headline-md": ["Space Grotesk"]}, "fontSize": {"headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}], "code-sm": ["12px", {"lineHeight": "1.5", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}], "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><a class="text-headline-md font-headline-md text-primary tracking-tight" data-path="home" href="#">Michael Emad</a><nav class="hidden lg:flex items-center gap-space-6" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg px-3 py-1.5"><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-bold rounded-lg px-3 py-1.5" data-path="home" href="#">Home</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="skills" href="#">Skills</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#">Projects</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="experience" href="#">Experience</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-4"><button aria-label="Toggle Language" class="p-space-2 rounded-lg bg-surface-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-all flex items-center gap-1 text-code-sm"><span class="material-symbols-outlined text-[18px]">language</span><span>EN/AR</span></button><button aria-label="Toggle Theme" class="p-space-2 rounded-lg bg-surface-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-all"><span class="material-symbols-outlined text-[18px]">dark_mode</span></button><a class="hidden sm:inline-flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-xl font-bold hover:bg-primary-container transition-all text-body-md" data-path="contact" href="#"><span class="material-symbols-outlined text-[18px]">download</span>CV</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full text-on-surface bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center overflow-hidden px-6 lg:px-12 py-20 bg-gradient-to-b from-surface-container-lowest to-surface">
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<div class="absolute top-1/4 left-10 w-96 h-96 bg-primary rounded-full blur-[128px]"></div>
+<div class="absolute bottom-10 right-10 w-96 h-96 bg-secondary rounded-full blur-[128px]"></div>
+</div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col items-start gap-space-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary text-code-sm border border-outline-variant/20">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Flutter &amp; Mobile Architecture Specialist</span>
+</div>
+<h1 class="text-headline-xl text-on-surface font-headline-xl tracking-tight">
+          Hi, I'm <span class="text-primary">Michael Emad</span>, Junior Flutter Developer.
+        </h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl font-body-lg">
+          I build modern, scalable and user-friendly cross-platform applications with Flutter and Dart, backed by enterprise-grade architecture and robust backend systems.
+        </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold hover:bg-primary-container transition-all flex items-center gap-2 text-body-md shadow-lg shadow-primary/10" href="#projects">
+<span>View My Projects</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="bg-surface-variant text-on-surface px-6 py-3 rounded-xl font-bold hover:bg-surface-bright transition-all flex items-center gap-2 text-body-md border border-outline-variant/30" href="#contact">
+<span>Contact Me</span>
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</a>
+</div>
+<div class="flex items-center gap-space-6 pt-6 border-t border-outline-variant/20 w-full text-on-surface-variant text-code-sm">
+<span class="text-outline">CONNECT:</span>
+<a class="hover:text-primary transition-colors flex items-center gap-1.5" href="https://github.com" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[18px]">code</span>GitHub</a>
+<a class="hover:text-primary transition-colors flex items-center gap-1.5" href="https://linkedin.com" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[18px]">work</span>LinkedIn</a>
+<a class="hover:text-primary transition-colors flex items-center gap-1.5" href="mailto:michael@example.com"><span class="material-symbols-outlined text-[18px]">alternate_email</span>Email</a>
+</div>
+</div>
+<!-- Right Visual Component -->
+<div class="lg:col-span-5 relative flex items-center justify-center">
+<div class="relative w-full max-w-md aspect-[4/5] bg-surface-container rounded-2xl p-6 flex flex-col justify-between shadow-2xl border border-primary/20 backdrop-blur-xl">
+<!-- Floating Badges -->
+<div class="absolute -top-4 -left-4 bg-surface-container-high px-3 py-1.5 rounded-lg text-code-sm text-primary shadow-lg border border-primary/30 animate-bounce">
+            ⚡ Flutter &amp; Dart
+          </div>
+<div class="absolute top-1/4 -right-6 bg-surface-container-high px-3 py-1.5 rounded-lg text-code-sm text-secondary-fixed-dim shadow-lg border border-secondary/30">
+            🧩 Clean Architecture
+          </div>
+<div class="absolute bottom-1/3 -left-6 bg-surface-container-high px-3 py-1.5 rounded-lg text-code-sm text-tertiary-fixed-dim shadow-lg border border-tertiary/30">
+            🔄 BLoC / Cubit
+          </div>
+<div class="absolute -bottom-4 right-8 bg-surface-container-high px-3 py-1.5 rounded-lg text-code-sm text-primary-container shadow-lg border border-primary/30">
+            🔥 Firebase &amp; Supabase
+          </div>
+<!-- Mock Device Header -->
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-primary-container"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-container"></div>
+</div>
+<span class="text-code-sm text-outline">mobile_workspace.dart</span>
+<span class="material-symbols-outlined text-primary text-[18px]">phone_iphone</span>
+</div>
+<!-- Mock Device Screen Content -->
+<div class="space-y-4 my-auto py-6">
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/20">
+<div class="flex items-center justify-between mb-2">
+<span class="text-code-sm text-primary">State Management</span>
+<span class="material-symbols-outlined text-primary text-[16px]">bolt</span>
+</div>
+<div class="h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary w-4/5 rounded-full"></div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/20">
+<div class="flex items-center justify-between mb-2">
+<span class="text-code-sm text-secondary-fixed-dim">API Integration</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">sync</span>
+</div>
+<div class="h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-full rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Mock Device Footer -->
+<div class="pt-4 border-t border-outline-variant/30 flex items-center justify-between text-code-sm text-outline">
+<span>SDK: 3.19.0+</span>
+<span class="text-primary font-bold">READY</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low relative" id="about">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-primary text-code-sm tracking-widest uppercase mb-2 block">01 // ABOUT ME</span>
+<h2 class="text-headline-lg text-on-surface font-headline-lg">More Than Just Code</h2>
+</div>
+<p class="text-body-lg text-on-surface-variant max-w-xl font-body-lg">
+          Combining deep mobile engineering expertise with enterprise backend understanding to deliver bulletproof applications.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant/20 flex flex-col justify-between hover:border-primary/50 transition-all group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">phone_android</span>
+</div>
+<h3 class="text-headline-md text-on-surface font-headline-md mb-3">Mobile Craftsmanship</h3>
+<p class="text-body-md text-on-surface-variant font-body-md">
+              Specialized in crafting fluid, responsive interfaces using Flutter and Dart. Focused on 60fps animations, cross-platform consistency, and immaculate UI/UX translation.
+            </p>
+</div>
+<div class="flex flex-wrap gap-2 mt-8">
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Flutter</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Dart</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Widgets</span>
+</div>
+</div>
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant/20 flex flex-col justify-between hover:border-primary/50 transition-all group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<h3 class="text-headline-md text-on-surface font-headline-md mb-3">Robust Architecture</h3>
+<p class="text-body-md text-on-surface-variant font-body-md">
+              Implementing Clean Architecture, SOLID principles, and scalable state management using BLoC, Cubit, and Provider to ensure maintainable, testable codebases.
+            </p>
+</div>
+<div class="flex flex-wrap gap-2 mt-8">
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Clean Arch</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">BLoC / Cubit</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">SOLID</span>
+</div>
+</div>
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant/20 flex flex-col justify-between hover:border-primary/50 transition-all group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">dns</span>
+</div>
+<h3 class="text-headline-md text-on-surface font-headline-md mb-3">Enterprise &amp; Backend</h3>
+<p class="text-body-md text-on-surface-variant font-body-md">
+              Extensive background in .NET, C#, SQL Server, and ERP systems, bridging the gap between mobile frontend and complex enterprise databases.
+            </p>
+</div>
+<div class="flex flex-wrap gap-2 mt-8">
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">.NET + C#</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">SQL Server</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">ERP Systems</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categorized Skills Section -->
+<section class="py-24 px-6 lg:px-12 bg-surface relative" id="skills">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-primary text-code-sm tracking-widest uppercase mb-2 block">02 // TECHNICAL STACK</span>
+<h2 class="text-headline-lg text-on-surface font-headline-lg mb-4">Categorized Skills</h2>
+<p class="text-body-lg text-on-surface-variant font-body-lg">
+          A comprehensive breakdown of tools, frameworks, and core technologies I use to engineer modern solutions.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Mobile Development -->
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-6">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">phone_iphone</span>
+</div>
+<h3 class="text-headline-md text-on-surface font-headline-md text-lg">Mobile Development</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Flutter SDK</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Dart Programming</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Cross-Platform UI</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Responsive Layouts</span>
+</div>
+</div>
+<!-- Architecture & Patterns -->
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-6">
+<div class="p-2 rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined">account_tree</span>
+</div>
+<h3 class="text-headline-md text-on-surface font-headline-md text-lg">Architecture &amp; Patterns</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Clean Architecture</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">BLoC / Cubit</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">SOLID Principles</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Provider / Riverpod</span>
+</div>
+</div>
+<!-- Backend & Cloud -->
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-6">
+<div class="p-2 rounded-lg bg-tertiary/10 text-tertiary">
+<span class="material-symbols-outlined">cloud</span>
+</div>
+<h3 class="text-headline-md text-on-surface font-headline-md text-lg">Backend &amp; Cloud</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Firebase (Auth, Firestore)</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Supabase</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">RESTful APIs</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Postman / Swagger</span>
+</div>
+</div>
+<!-- Local Storage -->
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-6">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">database</span>
+</div>
+<h3 class="text-headline-md text-on-surface font-headline-md text-lg">Local Storage</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Hive</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">SQLite / Sqflite</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">SharedPreferences</span>
+</div>
+</div>
+<!-- Software Development & ERP -->
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<div class="p-2 rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<h3 class="text-headline-md text-on-surface font-headline-md text-lg">Software Dev &amp; Enterprise</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">C# Programming</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">.NET Framework / Core</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">SQL Server &amp; T-SQL</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">ERP Systems Architecture</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-variant text-code-sm text-on-surface border border-outline-variant/20">Git &amp; GitHub</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects Section -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low relative" id="projects">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-primary text-code-sm tracking-widest uppercase mb-2 block">03 // PORTFOLIO</span>
+<h2 class="text-headline-lg text-on-surface font-headline-lg">Featured Projects</h2>
+</div>
+<p class="text-body-lg text-on-surface-variant max-w-xl font-body-lg">
+          Production-grade applications built with scalable architecture, secure authentication, and seamless user experiences.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Clinic Pro -->
+<div class="bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/20 flex flex-col justify-between group hover:border-primary/50 transition-all">
+<div class="relative h-64 overflow-hidden bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated medical clinic management SaaS dashboard on a mobile screen mockup, featuring patient appointment scheduling, clean dark UI, health metrics, and modern typography with cyan and blue accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcutbfWi2Sp7vDhu4JZ2Z47DCMBaPgQkg1n47hDPqcJ8KEzwpDx1W1nmvRq8Mc0X5eBcrqy9Q29a1qW7TLJs6b_Gzu-MshTthvKIAB25b-mUe2hOwrBMHvR30JJ5fXm2nVNngbAHvQrSfVyAnWFcTSKJTasklJOOVXuB5wr7uv8KyCAYUXZ7WCe0wdE3tpDfAwi6_CP5PYOnOg_aAS_RGOqME_TmvYnWNSv-4iaaYwc3hJQYKKEaG02Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-lg text-code-sm text-primary border border-primary/20">SaaS Platform</span>
+</div>
+<div class="p-8 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-headline-md text-on-surface font-headline-md mb-3">Clinic Pro (Medical Clinic Management SaaS)</h3>
+<p class="text-body-md text-on-surface-variant font-body-md mb-6">
+                A comprehensive cross-platform SaaS solution designed for medical clinics. Streamlines patient scheduling, medical records, billing, and doctor-patient communication with real-time synchronization.
+              </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Flutter</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">BLoC</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Clean Architecture</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Firebase</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">REST API</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-code-sm text-outline">Production Ready</span>
+<button class="inline-flex items-center gap-1.5 text-primary font-bold hover:underline text-body-md" onclick="alert('Viewing details for Clinic Pro: Medical Clinic Management SaaS')">
+<span>View Details</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Kemet Odyssey -->
+<div class="bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/20 flex flex-col justify-between group hover:border-primary/50 transition-all">
+<div class="relative h-64 overflow-hidden bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="An immersive Egyptian tourism application UI on a mobile mockup, showing ancient monuments, interactive maps, tour bookings, and rich cultural imagery with deep dark mode aesthetics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7Z_XhYLZRjqilJ6rhJrBQ5CxVHFL5MZTDBWpomUJXMWcX6ZYGwxhJHz7-fCOr0w-U0HPeWFBixbtocmpdpdHjO1P0vyMwUFvquEh5X6JmSG4luwkK4ftXioEOZ1thscCh1K1yFszsqsuDdvROsagj0a4OPm77m0S8vNJYYef1H_OmN59hFic2E-7o8ImkmCpg_fe1xpQa14Z7muP_21Y35bcivTfTUB9PGoabtbNEN8p2wdAa9lf7tg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-lg text-code-sm text-secondary-fixed-dim border border-secondary/20">Tourism App</span>
+</div>
+<div class="p-8 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-headline-md text-on-surface font-headline-md mb-3">Kemet Odyssey (Egyptian Tourism Application)</h3>
+<p class="text-body-md text-on-surface-variant font-body-md mb-6">
+                An immersive mobile travel guide designed to explore Egypt's historical landmarks. Features interactive maps, offline data caching via Hive, localized guides, and secure booking flows.
+              </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Flutter</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Cubit</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Supabase</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Hive</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Google Maps</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-code-sm text-outline">Featured Release</span>
+<button class="inline-flex items-center gap-1.5 text-primary font-bold hover:underline text-body-md" onclick="alert('Viewing details for Kemet Odyssey: Egyptian Tourism Application')">
+<span>View Details</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience & Education Section -->
+<section class="py-24 px-6 lg:px-12 bg-surface relative" id="experience">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-primary text-code-sm tracking-widest uppercase mb-2 block">04 // CAREER TIMELINE</span>
+<h2 class="text-headline-lg text-on-surface font-headline-lg mb-4">Experience &amp; Education</h2>
+<p class="text-body-lg text-on-surface-variant font-body-lg">
+          My professional journey across mobile app engineering, enterprise software development, and academic background.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Experience Timeline -->
+<div class="lg:col-span-7 space-y-8">
+<h3 class="text-headline-md text-on-surface font-headline-md mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">work</span>
+<span>Professional Experience</span>
+</h3>
+<!-- Flutter Developer (Freelance) -->
+<div class="relative pl-8 border-l-2 border-primary/30 group">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<h4 class="text-headline-md text-on-surface font-headline-md text-xl">Flutter Developer (Freelance)</h4>
+<span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-code-sm font-bold">Present</span>
+</div>
+<p class="text-code-sm text-secondary-fixed-dim mb-4">Cross-Platform Mobile Solutions</p>
+<p class="text-body-md text-on-surface-variant font-body-md">
+                Designing and developing scalable mobile applications using Flutter &amp; Dart. Implementing Clean Architecture, BLoC state management, and robust REST API integrations for various client startups and SaaS products.
+              </p>
+</div>
+</div>
+<!-- .NET Developer (Freelance) -->
+<div class="relative pl-8 border-l-2 border-outline-variant/30 group">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-surface-variant border-4 border-surface group-hover:bg-secondary transition-colors"></div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<h4 class="text-headline-md text-on-surface font-headline-md text-xl">.NET Developer (Freelance)</h4>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-code-sm">Previous</span>
+</div>
+<p class="text-code-sm text-secondary-fixed-dim mb-4">Backend &amp; Enterprise Systems</p>
+<p class="text-body-md text-on-surface-variant font-body-md">
+                Built secure backend services, RESTful APIs, and database structures using C#, .NET Core, and SQL Server. Assisted in integrating modules for custom enterprise ERP systems.
+              </p>
+</div>
+</div>
+<!-- Software & ERP Development -->
+<div class="relative pl-8 border-l-2 border-outline-variant/30 group">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-surface-variant border-4 border-surface group-hover:bg-tertiary transition-colors"></div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<h4 class="text-headline-md text-on-surface font-headline-md text-xl">Software &amp; ERP Development</h4>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-code-sm">Foundational</span>
+</div>
+<p class="text-code-sm text-secondary-fixed-dim mb-4">Enterprise Architecture</p>
+<p class="text-body-md text-on-surface-variant font-body-md">
+                Contributed to business logic development, database schema optimization, and reporting modules within enterprise resource planning workflows.
+              </p>
+</div>
+</div>
+</div>
+<!-- Education & Credentials -->
+<div class="lg:col-span-5 space-y-8">
+<h3 class="text-headline-md text-on-surface font-headline-md mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">school</span>
+<span>Education</span>
+</h3>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6 opacity-10">
+<span class="material-symbols-outlined text-[80px]">school</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<h4 class="text-headline-md text-on-surface font-headline-md text-xl">Minya University</h4>
+<span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-code-sm font-bold">2020 - 2024</span>
+</div>
+<p class="text-code-sm text-primary mb-4">Information Technology (IT)</p>
+<p class="text-body-md text-on-surface-variant font-body-md mb-6">
+              Completed rigorous coursework in computer science fundamentals, software engineering principles, data structures, algorithms, and database management systems.
+            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Algorithms</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Data Structures</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-code-sm text-on-surface-variant">Software Engineering</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+<h4 class="text-headline-md text-on-surface font-headline-md text-lg mb-3">Continuous Learning</h4>
+<p class="text-body-md text-on-surface-variant font-body-md">
+              Actively exploring advanced Flutter state management, performance profiling, native platform channels, and cloud architectures to stay at the cutting edge of mobile development.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low relative" id="contact">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-6">
+<span class="text-primary text-code-sm tracking-widest uppercase block">05 // GET IN TOUCH</span>
+<h2 class="text-headline-lg text-on-surface font-headline-lg">Let's Build Something Great Together</h2>
+<p class="text-body-lg text-on-surface-variant font-body-lg">
+            Have a project in mind, a mobile app to build, or want to discuss potential opportunities? Drop me a message and I'll get back to you promptly.
+          </p>
+<div class="space-y-4 pt-4">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<span class="text-code-sm text-outline block">EMAIL ME</span>
+<span class="text-body-md text-on-surface">michael.emad.dev@gmail.com</span>
+</div>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<span class="text-code-sm text-outline block">LOCATION</span>
+<span class="text-body-md text-on-surface">Egypt (Available Worldwide Remotely)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<form class="bg-surface-container p-8 rounded-2xl border border-outline-variant/20 space-y-6 shadow-xl" onsubmit="event.preventDefault(); alert('Message sent successfully! Thank you for reaching out.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-code-sm text-on-surface-variant block">Your Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:outline-none focus:border-primary font-body-md transition-colors" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-code-sm text-on-surface-variant block">Your Email</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:outline-none focus:border-primary font-body-md transition-colors" placeholder="john@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-code-sm text-on-surface-variant block">Subject</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:outline-none focus:border-primary font-body-md transition-colors" placeholder="Project Inquiry / Job Opportunity" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-code-sm text-on-surface-variant block">Message</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:outline-none focus:border-primary font-body-md transition-colors resize-none" placeholder="Hello Michael, I'd like to talk about..." required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:bg-primary-container transition-all text-body-md flex items-center justify-center gap-2 shadow-lg shadow-primary/10" type="submit">
+<span>Send Message</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Client-side Logic for Theme, Language/RTL, and Navigation -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme Toggle Support in App Shell Header
+      const themeToggleBtn = document.querySelector('button[aria-label="Toggle Theme"]');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark');
+          const isDark = document.documentElement.classList.contains('dark');
+          themeToggleBtn.querySelector('span').textContent = isDark ? 'light_mode' : 'dark_mode';
+        });
+      }
+
+      // Language / RTL Toggle Support in App Shell Header
+      const langToggleBtn = document.querySelector('button[aria-label="Toggle Language"]');
+      if (langToggleBtn) {
+        let isArabic = false;
+        langToggleBtn.addEventListener('click', () => {
+          isArabic = !isArabic;
+          document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+          document.documentElement.setAttribute('lang', isArabic ? 'ar' : 'en');
+          alert(isArabic ? 'Switched to Arabic (RTL mode activated)' : 'Switched to English (LTR mode activated)');
+        });
+      }
+
+      // Smooth scrolling for internal anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-space-4 text-on-surface-variant text-body-md"><div>© 2024 Michael Emad. Built with Flutter &amp; Tailwind CSS.</div><div class="flex items-center gap-space-6"><a class="hover:text-on-surface transition-colors" href="#">GitHub</a><a class="hover:text-on-surface transition-colors" href="#">LinkedIn</a><a class="hover:text-on-surface transition-colors" href="#">Twitter</a></div></div></footer></body></html>
